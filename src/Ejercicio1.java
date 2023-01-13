@@ -1,4 +1,5 @@
 
+//import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -24,7 +25,7 @@ public class Ejercicio1 {
                 System.out.println("Introduce un numero entero: ");
                 valor=tcl.nextInt();
                 leido=true;
-            }catch (InputMismatchException e){
+            }catch (Exception a){
                 System.out.println("Error en la introduccion del numero");
                 tcl.nextLine();
             }
