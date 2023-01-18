@@ -20,14 +20,17 @@ public class Ejercicio6 {
         int punto= correo.indexOf('.');
 
         try{
-            System.out.println(correo);
-            if (arroba>0 && (punto-arroba)>=2 && punto<correo.length()) {//Condicion para saber si hay algo antes del @ y despues del @ y despues del punto
-                
+            //System.out.println(correo);
+            if (arroba>0 || (punto-arroba)>=2 || punto<correo.length()) {
+                //Condicion para saber si hay algo antes del @ y despues del @ y despues del punto
+                throw new Exception ("DirCorreoIncorrectaExcepcion");
             }
-        }catch (DirCorreoIncorrectaExcepcion e){
-            System.out.println("");
+        }catch (Exception dir){
+            System.out.println("El correo esta mal");
         }
         
     }
-    
+    public static void main(String[] args) {
+        DirCorreoIncorrectaExcepcion("ivan@.com");
+    }
 }

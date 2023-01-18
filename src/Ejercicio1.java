@@ -16,25 +16,22 @@ public class Ejercicio1 {
     
     
     public static void main(String[] args) {
-        Scanner tcl= new Scanner(System.in);
-        int valor=0;
-        boolean leido=false;
+        int a=20;
         
-        do{
             try{
-                System.out.println("Introduce un numero entero: ");
-                valor=tcl.nextInt();
-                leido=true;
-            }catch (Exception a){
+                if(a>10){
+                Exception e = new Exception("Crea una excepcion");
+                throw e;
+                }
+            }catch (Exception e){
                 System.out.println("Error en la introduccion del numero");
-                tcl.nextLine();
             }
             
-        }while (!leido);
-        System.out.println("Hemos leido : "+valor);
-            
-        }
+        
+        
         
     }
+}
+
     
 
