@@ -8,14 +8,14 @@
  * @author ivamar
  */
 public class Corredor {
-     int energia;
+    private int energia;
     
     public Corredor(int energia){
        this.energia=energia;
     }
     
     public void recargarEnergia(int qtyenergia){
-       this.energia+=qtyenergia;
+       this.energia=qtyenergia;
     }
     
     class AgotadoException extends Exception{
@@ -23,17 +23,24 @@ public class Corredor {
             super (msj);
         }
     }
+
+    public int getEnergia() {
+        return energia;
+    }
     
     
     public void correr()throws AgotadoException{
         try{
-            if(this.energia>10){
+            System.out.println("El corredor empieza con: "+this.energia);
+            if(this.energia>=10){
                 this.energia=this.energia-10;
             }else{
                 throw new AgotadoException("TIENES MENOS DE 10 ENERGIA");
             }
         }catch (AgotadoException a){
-            System.out.println("El corredor tiene :"+this.energia+" de energia");
+           // System.out.println("El corredor tiene :"+this.energia+" de energia");
+        }finally{
+            System.out.println("El corredor acaba con :"+this.energia+" de energia");
         }
     }
     
