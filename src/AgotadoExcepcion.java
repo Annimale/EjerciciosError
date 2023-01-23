@@ -7,6 +7,11 @@
  *
  * @author ivamar
  */
-public class AgotadoException {
+
+    public class AgotadoExcepcion extends Exception{
+        public AgotadoExcepcion (String msj){
+            super (msj);
+        }
+    }
     
-}
+

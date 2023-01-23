@@ -21,7 +21,8 @@ public class Ejercicio6 {
 
         try{
             //System.out.println(correo);
-            if (arroba>0 || (punto-arroba)>=2 || punto<correo.length()) {
+            //if (arroba>0 || (punto-arroba)>=2 || punto<correo.length()) {
+            if (arroba<1 || (punto-arroba)<=1 || punto>correo.length()) {
                 //Condicion para saber si hay algo antes del @ y despues del @ y despues del punto
                 throw new Exception ("DirCorreoIncorrectaExcepcion");
             }
@@ -31,6 +32,6 @@ public class Ejercicio6 {
         
     }
     public static void main(String[] args) {
-        DirCorreoIncorrectaExcepcion("ivan@.com");
+        DirCorreoIncorrectaExcepcion("..@......");
     }
 }

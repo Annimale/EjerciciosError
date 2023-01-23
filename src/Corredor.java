@@ -7,8 +7,21 @@
  *
  * @author ivamar
  */
+
+
+
 public class Corredor {
     private int energia;
+    
+    //class AgotadoExcepcion extends Exception{//ESTO EN TEORIA ESTA MAL HABRÍA QUE SACAR LA CLASE AGOTADOEXCEPCION FUERA DE PUBLIC CLASS CORREDOR, PERO SI LA SACO LUEGO 
+        //NO PUEDO EAPLCIARLA EN LOS METODOS DE CORREDOR, LA SOLUCIÓN ESTÁ EN CREAR UN FICHERO CON LA CLASE SIMPLEMENTE5
+        
+        //public AgotadoExcepcion (String msj){
+           // super (msj);
+        //}
+    //}
+    
+    
     
     public Corredor(int energia){
        this.energia=energia;
@@ -18,27 +31,22 @@ public class Corredor {
        this.energia=qtyenergia;
     }
     
-    class AgotadoException extends Exception{
-        public AgotadoException (String msj){
-            super (msj);
-        }
-    }
 
     public int getEnergia() {
         return energia;
     }
     
     
-    public void correr()throws AgotadoException{
+    public void correr()throws AgotadoExcepcion{
         try{
             System.out.println("El corredor empieza con: "+this.energia);
             if(this.energia>=10){
                 this.energia=this.energia-10;
             }else{
-                throw new AgotadoException("TIENES MENOS DE 10 ENERGIA");
+                throw new AgotadoExcepcion("TIENES MENOS DE 10 ENERGIA");
             }
-        }catch (AgotadoException a){
-           // System.out.println("El corredor tiene :"+this.energia+" de energia");
+        }catch (AgotadoExcepcion a){
+           System.out.println(a.getMessage());
         }finally{
             System.out.println("El corredor acaba con :"+this.energia+" de energia");
         }

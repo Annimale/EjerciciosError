@@ -19,15 +19,15 @@
  */
 public class Entrenamiento {
 
-    public static void main(String[] args) throws Corredor.AgotadoException {
+    public static void main(String[] args) throws Corredor.AgotadoExcepcion {
         Corredor Pepe = new Corredor(50);
         for (int i = 0; i <= 3; i++) {
-            for (int j = 0; j <= (Pepe.getEnergia() / 10); j++) {//He de poner el mas 1 para llegar a la excepcion
-
+            for (int j = 0; j <=(Pepe.getEnergia() / 10)+1; j++) {//He de poner el mas 1 para llegar a la excepcion
+                
                 try {
                     Pepe.correr();
 
-                } catch (Corredor.AgotadoException a) {
+                } catch (Corredor.AgotadoExcepcion a) {
                 }
             }
             if (i == 1) {
