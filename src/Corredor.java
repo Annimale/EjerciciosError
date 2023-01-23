@@ -13,13 +13,12 @@
 public class Corredor {
     private int energia;
     
-    //class AgotadoExcepcion extends Exception{//ESTO EN TEORIA ESTA MAL HABRÍA QUE SACAR LA CLASE AGOTADOEXCEPCION FUERA DE PUBLIC CLASS CORREDOR, PERO SI LA SACO LUEGO 
+    class AgotadoExcepcion extends Exception{//ESTO EN TEORIA ESTA MAL HABRÍA QUE SACAR LA CLASE AGOTADOEXCEPCION FUERA DE PUBLIC CLASS CORREDOR, PERO SI LA SACO LUEGO 
         //NO PUEDO EAPLCIARLA EN LOS METODOS DE CORREDOR, LA SOLUCIÓN ESTÁ EN CREAR UN FICHERO CON LA CLASE SIMPLEMENTE5
-        
-        //public AgotadoExcepcion (String msj){
-           // super (msj);
-        //}
-    //}
+        public AgotadoExcepcion (String msj){
+            super (msj);
+        }
+    }
     
     
     
