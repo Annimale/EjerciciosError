@@ -4,7 +4,15 @@
  */
 
 /**
- *
+ *Escribe un método, de nombre mostrarCadenasArray, que reciba por
+parámetro un array con cadenas de caracteres. El método mostrará
+Programación – DAM - Semipresencial U07 – Ejercicios2
+3
+por pantalla el primer carácter de cada una de las cadenas contenidas
+en el array.
+ Se debe evitar que se produzca una excepción
+NullPointerException si alguna de las posiciones del array
+contiene una referencia no inicializada (valor null)
  * @author ivamar
  */
 public class Ejercicio5 {

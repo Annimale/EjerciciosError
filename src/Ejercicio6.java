@@ -4,7 +4,7 @@
  */
 
 /**
- *
+ 
  * @author ivamar
  */
 public class Ejercicio6 {

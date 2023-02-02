@@ -8,14 +8,16 @@ import java.util.Scanner;
  */
 
 /**
- *
+ *Escribe un programa que lance y capture una excepción de la clase
+Exception
+
  * @author skril
  */
 public class Ejercicio1 {
     
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         int a=20;
         
             try{
