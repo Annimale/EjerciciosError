@@ -18,17 +18,20 @@ public class Ejercicio1 {
     
     
     public static void main(String[] args)throws Exception {
-        int a=20;
-        
+        int a;
+        Scanner tcl=new Scanner (System.in);
+        do {
+                    System.out.println("Introduce un numero menor a 10");
+                    a=tcl.nextInt();
             try{
                 if(a>10){
-                Exception e = new Exception("Crea una excepcion");
+                Exception e = new Exception("El numero ha de ser menor a 10");
                 throw e;
                 }
             }catch (Exception e){
-                System.out.println("Error en la introduccion del numero");
+                System.out.println(e.getMessage());
             }
-            
+            } while (a>10);
         
         
         
